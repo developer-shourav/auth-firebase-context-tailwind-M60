@@ -4,3 +4,8 @@
  * 2. create provider 
  * 3. set context value
  * 4. to access value : useContext hook**/
+
+/**Then 
+ * 1. in main.jsx set AuthProvider
+ * 2. inside provider access children props and then use 
+*/
