@@ -1,11 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
     const handleLogin = event => {
         event.preventDefault();
-        const email = event.target.email.value;
-        const password = event.target.password.value;
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
         console.log(email, password);
+
+       /*  form.reset(); */
     } 
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -48,7 +52,9 @@ const Login = () => {
             <div className="form-control mt-6">
              <input className="btn btn-primary" type="submit" value="Login" />
             </div>
+            <Link to='/register'>New to <strong>AuthMaster</strong> ?<button className="btn btn-link"> Register now</button></Link>
           </form>
+          
         </div>
       </div>
     </div>

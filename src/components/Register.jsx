@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     return (
@@ -45,15 +46,12 @@ const Register = () => {
                   className="input input-bordered"
                   required
                 />
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
-                </label>
+                <Link to='/login'>Already registered ?<button className="btn btn-link"> Login now</button></Link>
               </div>
               <div className="form-control mt-6">
                <input className="btn btn-primary" type="submit" value="Login" />
               </div>
+             
             </form>
           </div>
         </div>
