@@ -1,6 +1,12 @@
 import React from "react";
 
 const Login = () => {
+    const handleLogin = event => {
+        event.preventDefault();
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        console.log(email, password);
+    } 
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col md:flex-row-reverse">
@@ -9,7 +15,7 @@ const Login = () => {
          
         </div>
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-          <form className="card-body">
+          <form onSubmit={handleLogin} className="card-body">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
