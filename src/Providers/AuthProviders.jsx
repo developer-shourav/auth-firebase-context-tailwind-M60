@@ -14,15 +14,8 @@ const [user, setUser] = useState(null);
 
 const createUser = (email, password) => {
 
-    createUserWithEmailAndPassword(auth, email, password)
-    .then( result => {
-
-        const loggedUser = result.user;
-        console.log(loggedUser);
-    })
-    .catch ( error => {
-        console.log(error.message);
-    })
+   return createUserWithEmailAndPassword(auth, email, password)
+    
 }
 
 const authInfo = {
