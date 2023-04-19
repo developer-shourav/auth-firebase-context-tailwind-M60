@@ -2,9 +2,9 @@ import React, { createContext } from 'react';
 
 export const AuthContext = createContext(null);
 
-
 const AuthProviders = ({children}) => {
-    const user = {displayName:'Shourav'};
+    const user = { disPlayName:'Shourav'};
+
     return (
         <AuthContext.Provider value={user}>
             {children}
@@ -13,4 +13,3 @@ const AuthProviders = ({children}) => {
 };
 
 export default AuthProviders;
-

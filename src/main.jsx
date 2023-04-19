@@ -38,8 +38,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-       <AuthProviders> 
-         <RouterProvider router={router} />
-       </AuthProviders>
-  </React.StrictMode>,
+        <AuthProviders> 
+          <RouterProvider router={router} />
+        </AuthProviders>
+  </React.StrictMode>
 )
