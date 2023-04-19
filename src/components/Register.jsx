@@ -58,7 +58,7 @@ const Register = () => {
                 <Link to='/login'>Already registered ?<button className="btn btn-link"> Login now</button></Link>
               </div>
               <div className="form-control mt-6">
-               <input className="btn btn-primary" type="submit" value="Login" />
+               <input className="btn btn-primary" type="submit" value="Register" />
               </div>
              
             </form>
