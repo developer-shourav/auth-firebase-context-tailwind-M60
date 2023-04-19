@@ -17,14 +17,16 @@ const Register = () => {
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
+        Swal.fire("Good job!", "Account created successfully!", "success");
+        form.reset();
       })
       .catch((error) => {
         console.log(error.message);
       });
 
-    Swal.fire("Good job!", "Account created successfully!", "success");
+    
 
-    form.reset();
+
   };
   return (
     <div className="hero min-h-screen bg-base-200">
