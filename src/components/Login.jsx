@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProviders";
 
 const Login = () => {
+   const {signIn} = useContext(AuthContext);
+   console.log(signIn)
+
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
@@ -9,7 +13,15 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password);
 
-       /*  form.reset(); */
+        signIn(email, password)
+        .then( result => {
+          console.log(result);
+          form.reset();
+        })
+
+        .catch( error => {
+          console.log(error.message);
+        })
     } 
   return (
     <div className="hero min-h-screen bg-base-200">
