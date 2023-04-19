@@ -9,7 +9,8 @@ const auth = getAuth(app);
 const [user, setUser] = useState(null);
 
 const authInfo = {
-    user
+    user,
+    
 }
 
 const AuthProviders = ({children}) => {
