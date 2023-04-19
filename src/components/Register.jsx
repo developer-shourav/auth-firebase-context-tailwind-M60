@@ -5,9 +5,9 @@ import { AuthContext } from '../providers/AuthProviders';
 const Register = () => {
 
    
-  const user = useContext(AuthContext);
-    
-  console.log(user);
+  const allInfo = useContext(AuthContext);
+  const {createUser} = allInfo;
+
 
     const handleRegister = event => {
         event.preventDefault();
@@ -16,6 +16,8 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(userName, email, password);
+        createUser(email, password)
+        
     }
     return (
         <div className="hero min-h-screen bg-base-200">
