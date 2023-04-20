@@ -4,7 +4,6 @@ import { AuthContext } from "../providers/AuthProviders";
 
 const Login = () => {
    const {signIn} = useContext(AuthContext);
-   console.log(signIn)
 
     const handleLogin = event => {
         event.preventDefault();
