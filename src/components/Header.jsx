@@ -20,6 +20,7 @@ const Header = () => {
         <Link to='/orders' className="btn btn-ghost normal-case text-md">Orders</Link>
         <Link to='/login' className="btn btn-ghost normal-case text-md">Login</Link>
         <Link to='/register' className="btn btn-ghost normal-case text-md">Register</Link>
+        <Link to='/profile' className="btn btn-ghost normal-case text-md">Profile</Link>
         {
           user ? <> <span>{user.email}</span>  <button onClick={handleLogOut}  className="btn btn-xs">Sign out</button> </>: ''
         }
